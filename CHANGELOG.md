@@ -1,8 +1,8 @@
 # Change Log
 
-## [2.5.0](https://github.com/danielcaldas/react-d3-graph/tree/2.5.0)
+## [2.5.3](https://github.com/danielcaldas/react-d3-graph/tree/2.5.3)
 
-[Full Changelog](https://github.com/danielcaldas/react-d3-graph/compare/2.4.1...2.5.0)
+[Full Changelog](https://github.com/danielcaldas/react-d3-graph/compare/2.4.1...2.5.3)
 
 **Implemented enhancements:**
 
