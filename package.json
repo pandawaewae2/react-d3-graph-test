@@ -1,5 +1,5 @@
 {
-  "name": "react-d3-graph-test",
+  "name": "@pandawaewae2/react-d3-graph-test",
   "version": "2.5.3",
   "description": "React component to build interactive and configurable graphs with d3 effortlessly",
   "author": "Daniel Caldas",
@@ -112,6 +112,15 @@
     }
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
+  },
+  "bugs": {
+    "url": "https://github.com/pandawaewae2/react-d3-graph-test/issues"
+  },
+  "homepage": "https://github.com/pandawaewae2/react-d3-graph-test#readme",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
   }
 }
