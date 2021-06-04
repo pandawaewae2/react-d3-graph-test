@@ -93,7 +93,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://https://github.com/pandawaewae2/react-d3-graph-test.git"
+    "url": "git+https://github.com/pandawaewae2/react-d3-graph-test.git"
   },
   "keywords": [
     "d3-visualization",
