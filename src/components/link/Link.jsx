@@ -32,7 +32,8 @@ import React from "react";
  *     onClickLink={onClickLink}
  *     onRightClickLink={onRightClickLink}
  *     onMouseOverLink={onMouseOverLink}
- *     onMouseOutLink={onMouseOutLink} />
+ *     onMouseOutLink={onMouseOutLink}
+ *     node={{source:Node,target:Node}} // for ViewGenerator  />
  */
 export default class Link extends React.Component {
     /**
@@ -88,7 +89,7 @@ export default class Link extends React.Component {
             lineProps.markerEnd = `url(#${this.props.markerId})`;
         }
 
-        const { label, id } = this.props;
+        const { label, id, node } = this.props;
         const textProps = {
             dy: -1,
             style: {
@@ -98,17 +99,24 @@ export default class Link extends React.Component {
             },
         };
 
-        return (
+        if (this.props.viewGenerator) {
+          return this.props.viewGenerator(
+            { source: node?.source, target: node?.target, label },
+            { id, lineProps, textProps }
+          );
+        } else {
+          return (
             <g>
-                <path {...lineProps} id={id} />
-                {label && (
-                    <text style={{ textAnchor: "middle" }} {...textProps}>
-                        <textPath href={`#${id}`} startOffset="50%">
-                            {label}
-                        </textPath>
-                    </text>
-                )}
+              <path {...lineProps} id={id} />
+              {label && (
+                <text style={{ textAnchor: "middle" }} {...textProps}>
+                  <textPath href={`#${id}`} startOffset="50%">
+                    {label}
+                  </textPath>
+                </text>
+              )}
             </g>
-        );
+          );
+        }
     }
 }

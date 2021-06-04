@@ -165,6 +165,7 @@ function buildLinkProps(link, nodes, links, config, linkCallbacks, highlightedNo
         stroke,
         strokeWidth,
         target,
+        viewGenerator: link.viewGenerator || config.link.viewGenerator,
         onClickLink: linkCallbacks.onClickLink,
         onMouseOutLink: linkCallbacks.onMouseOutLink,
         onMouseOverLink: linkCallbacks.onMouseOverLink,

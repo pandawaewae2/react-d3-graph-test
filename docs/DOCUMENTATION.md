@@ -533,7 +533,18 @@ const graph = {
         -   "CURVE_FULL" - a semicircumference trajectory unites source and target nodes.
             </br>
             <img src="https://github.com/danielcaldas/react-d3-graph/blob/master/docs/rd3g-bend.gif?raw=true" width="820" height="480"/> (optional, default `"STRAIGHT"`)
-
+    - `link.viewGenerator` **[Function][190]** <a id="link-view-generator" href="#link-view-generator">🔗</a> 🔍 function that receives parameters ( link label, source node, target node, link options ) and returns a JSX view.
+    ```js
+    viewGenerator: (props, options) => (
+        <CustomLink
+        label={props.label}
+        source={props.source}
+        target={props.target}
+        id={options.id}
+        textProps={options.textProps}
+        lineProps={options.lineProps}
+        />),
+    ```
 ### Examples
 
 ```javascript
